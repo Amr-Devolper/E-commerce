@@ -1,8 +1,5 @@
 "use client";
 import { getUserCart } from "../_actions/cartActions";
-
-"use client";
-
 import React, { ReactNode, createContext, useState, Dispatch, SetStateAction,useEffect } from "react";
 
 
