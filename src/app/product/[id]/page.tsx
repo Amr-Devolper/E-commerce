@@ -32,7 +32,8 @@ export default async function page({ params } : { params: { id: string } }) {
 
         <h1 className="text-2xl font-bold my-3">{product?.title}</h1>
         <div className="flex items-center">
-          <StarsCount rating={product?.ratingsAverage} />{" "}
+        
+          <StarsCount rating={product?.ratingsAverage || 0} />{" "}
           {product?.ratingsAverage}
         </div>
         <p className="text-gray-700 my-3">{product?.description}</p>

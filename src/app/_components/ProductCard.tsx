@@ -16,7 +16,7 @@ interface ProductCardPropsType {
 
 export default function ProductCard({product}: ProductCardPropsType) {
   return (
-     <div className="w-fit p-3 border-1 rounded-md relative">
+     <div className="w-fit p-3 border rounded-md relative">
             <div className="absolute top-4 right-4">
               <div className="cursor-pointer bg-white rounded-full text-xl p-1 shadow-2xl border flex items-center justify-between">
                 <CiHeart className="text-gray-600"/>

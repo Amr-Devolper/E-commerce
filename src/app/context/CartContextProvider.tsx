@@ -1,20 +1,11 @@
 "use client";
+
+import { ReactNode, createContext, useEffect, useState } from "react";
 import { getUserCart } from "../_actions/cartActions";
-import React, { ReactNode, createContext, useState, Dispatch, SetStateAction,useEffect } from "react";
 
 
-interface CartContextType {
-  numberOfCartItems: number;
-  setNumberOfCartItems: Dispatch<SetStateAction<number>>;
-}
 
-
-export const cartContext = createContext<CartContextType>({
-  numberOfCartItems: 0,
-  setNumberOfCartItems: () => {}, // Default empty function
-});
-
-
+export const cartContext = createContext({});
 
 export default function CartContextProvider({
   children,
