@@ -1,7 +1,6 @@
+
 import { NextAuthOptions } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
-import { email } from "zod";
-import page from "../page";
 
 export const nextAuthConfig: NextAuthOptions = {
   providers: [
@@ -11,6 +10,7 @@ export const nextAuthConfig: NextAuthOptions = {
         email: {},
         password: {},
       },
+// @ts-ignore
       async authorize(credentials) {
         {
           const response = await fetch(
@@ -49,6 +49,7 @@ export const nextAuthConfig: NextAuthOptions = {
       console.log("jwt callback params : ", params)
 
         if(params.user){
+          // @ts-ignore
              params.token.realTokenFromBackend = params.user.realTokenFromBackend
         }
 

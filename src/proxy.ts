@@ -11,7 +11,7 @@ export default async function proxy(req : NextRequest) {
   
     return NextResponse.next()
 }
-
+e
 
 export const config = {
     matcher: ["/shop"]
