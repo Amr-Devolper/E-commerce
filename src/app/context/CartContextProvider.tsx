@@ -1,10 +1,23 @@
 "use client";
-
-import React, { ReactNode, createContext, useEffect, useState } from "react";
 import { getUserCart } from "../_actions/cartActions";
-import { set } from "zod";
 
-export const cartContext = createContext({});
+"use client";
+
+import React, { ReactNode, createContext, useState, Dispatch, SetStateAction,useEffect } from "react";
+
+
+interface CartContextType {
+  numberOfCartItems: number;
+  setNumberOfCartItems: Dispatch<SetStateAction<number>>;
+}
+
+
+export const cartContext = createContext<CartContextType>({
+  numberOfCartItems: 0,
+  setNumberOfCartItems: () => {}, // Default empty function
+});
+
+
 
 export default function CartContextProvider({
   children,
