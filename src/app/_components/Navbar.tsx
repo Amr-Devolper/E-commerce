@@ -25,7 +25,7 @@ import { cartContext } from "../context/CartContextProvider";
 export default function Navbar() {
   const session = useSession();
   
-
+  // @ts-ignore
   const { numberOfCartItems } = useContext(cartContext)
 
   console.log(session);

@@ -8,6 +8,7 @@ import  { cartContext } from "../context/CartContextProvider";
 
 
 export default function AddToCartBtn({ productId }: { productId: string }) {
+  // @ts-ignore
     const { setNumberOfCartItems } = useContext(cartContext)
 
   async function handleAddCart() {
